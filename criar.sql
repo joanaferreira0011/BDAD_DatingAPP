@@ -1,4 +1,6 @@
 --Clean tables
+DROP TABLE IF EXISTS Campanha;
+DROP TABLE IF EXISTS Anunciante;
 DROP TABLE IF EXISTS ContaFree;
 DROP TABLE IF EXISTS ContaPremium;
 DROP TABLE IF EXISTS User;
@@ -28,4 +30,20 @@ CREATE TABLE ContaPremium(
 CREATE TABLE ContaFree(
   idUser NUMBER REFERENCES User(idUser),
   mesGratisUsado INT NOT NULL --bool
+);
+
+CREATE TABLE Anunciante(
+  idAnunciante INTEGER PRIMARY KEY AUTOINCREMENT,
+  nome NVARCHAR(50) NOT NULL,
+  saldo REAL NOT NULL
+);
+
+
+CREATE TABLE Campanha(
+  idCampanha INTEGER PRIMARY KEY AUTOINCREMENT,
+  conteudo TEXT NOT NULL,
+  dataInicio TEXT NOT NULL,
+  dataFim TEXT NOT NULL,
+  idAnunciante NUMBER REFERENCES Anunciante(idAnunciante),
+  custo REAL NOT NULL
 );

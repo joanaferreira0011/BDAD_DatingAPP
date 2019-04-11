@@ -1,6 +1,8 @@
 --Clean tables
 DROP TABLE IF EXISTS Campanha;
 DROP TABLE IF EXISTS Anunciante;
+DROP TABLE IF EXISTS Mensagem;
+DROP TABLE IF EXISTS Denuncia;
 DROP TABLE IF EXISTS Encontro;
 DROP TABLE IF EXISTS Local;
 DROP TABLE IF EXISTS Match;
@@ -75,7 +77,22 @@ CREATE TABLE Local(
 
 CREATE TABLE Encontro(
   idMatch INTEGER PRIMARY KEY AUTOINCREMENT,
-  match NUMBER REFERENCES Like(idMatch),
-  local NUMBER REFERENCES Like(idLocal),
+  match NUMBER REFERENCES Match(idMatch),
+  local NUMBER REFERENCES Local(idLocal),
+  data TEXT NOT NULL
+);
+
+CREATE TABLE Denuncia(
+  idDenuncia INTEGER PRIMARY KEY AUTOINCREMENT,
+  mensagem NUMBER REFERENCES Mensagem(idMensagem),
+  descricao TEXT NOT NULL,
+  data TEXT NOT NULL
+);
+
+CREATE TABLE Mensagem(
+  idMensagem INTEGER PRIMARY KEY AUTOINCREMENT,
+  match NUMBER REFERENCES Match(idMatch),
+  remetente NUMBER REFERENCES User(idUser),
+  conteudo TEXT NOT NULL,
   data TEXT NOT NULL
 );

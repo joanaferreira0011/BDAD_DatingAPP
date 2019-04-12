@@ -1,7 +1,7 @@
 # DatingAPP
 
 ### **Description** 
-This is the database for a possible dating app.
+A possible design of a database for a dating app.
 
 ### **Context** 
 'Databases' course of the Integrated Master in Informatics and Computing Engineering at the University of Porto.

@@ -60,7 +60,8 @@ CREATE TABLE Campanha(
 CREATE TABLE TipoAnuncio(
   idTipoAnuncio INTEGER PRIMARY KEY AUTOINCREMENT,
   data TEXT NOT NULL,
-  campanha NUMBER REFERENCES Campanha(idCampanha)
+  campanha NUMBER REFERENCES Campanha(idCampanha),
+  interesse NUMBER REFERENCES Interesse(idInteresse)
 );
 
 CREATE TABLE Interesse(

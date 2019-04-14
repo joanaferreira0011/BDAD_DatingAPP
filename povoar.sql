@@ -37,9 +37,9 @@ INSERT INTO Campanha(idCampanha, conteudo, dataInicio, dataFim, idAnunciante, cu
 
 
 --TipoAnuncio
-INSERT INTO TipoAnuncio(idTipoAnuncio, data, campanha) VALUES (1, '2016-06-02', 1);
-INSERT INTO TipoAnuncio(idTipoAnuncio, data, campanha) VALUES (2, '2016-04-02', 1);
-INSERT INTO TipoAnuncio(idTipoAnuncio, data, campanha) VALUES (3, '2018-01-02', 2);
+INSERT INTO TipoAnuncio(idTipoAnuncio, data, campanha, interesse) VALUES (1, '2016-06-02', 1, 0);
+INSERT INTO TipoAnuncio(idTipoAnuncio, data, campanha, interesse) VALUES (2, '2016-04-02', 1, 2);
+INSERT INTO TipoAnuncio(idTipoAnuncio, data, campanha, interesse) VALUES (3, '2018-01-02', 2, 1);
 
 --AnuncioTemplate
 INSERT INTO AnuncioTemplate(idAnuncioTemplate, click, tipoAnuncio) VALUES(1, 0, 1);

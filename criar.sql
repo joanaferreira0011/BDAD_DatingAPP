@@ -59,7 +59,6 @@ CREATE TABLE Campanha(
 
 CREATE TABLE TipoAnuncio(
   idTipoAnuncio INTEGER PRIMARY KEY AUTOINCREMENT,
-  tipo TEXT NOT NULL,
   data TEXT NOT NULL,
   idAnuncioTemplate NUMBER REFERENCES AnuncioTemplate(idAnuncioTemplate)
 );
@@ -86,8 +85,7 @@ CREATE TABLE Like(
 CREATE TABLE Match(
   idMatch INTEGER PRIMARY KEY AUTOINCREMENT,
   like1 NUMBER REFERENCES Like(idLike),
-  like2 NUMBER REFERENCES Like(idLike),
-  data TEXT NOT NULL
+  like2 NUMBER REFERENCES Like(idLike)
 );
 
 CREATE TABLE Local(

@@ -32,14 +32,14 @@ INSERT INTO Anunciante(idAnunciante, nome, saldo) VALUES (2, "Toyota", 0);
 INSERT INTO Anunciante(idAnunciante, nome, saldo) VALUES (3, "Tencent", -10000);
 
 --Campanha
-INSERT INTO Campanha(idCampanha, conteudo, dataInicio, dataFim, idAnunciante, custo) VALUES (1, "I'm lovin it", "02/05/2015", "01/08/2025", 1, 1000000);--McDonalds
-INSERT INTO Campanha(idCampanha, conteudo, dataInicio, dataFim, idAnunciante, custo) VALUES (2, "New McBifana", "01/01/2018", "01/08/2018", 1, 75000);--McDonalds
+INSERT INTO Campanha(idCampanha, conteudo, dataInicio, dataFim, idAnunciante, custo) VALUES (1, "I'm lovin it", "02/05/2015", "2025-08-01", 1, 1000000);--McDonalds
+INSERT INTO Campanha(idCampanha, conteudo, dataInicio, dataFim, idAnunciante, custo) VALUES (2, "New McBifana", "01/01/2018", "2018-08-01", 1, 75000);--McDonalds
 
 
 --TipoAnuncio
-INSERT INTO TipoAnuncio(idTipoAnuncio, data, campanha) VALUES (1, '02/06/2016', 1);
-INSERT INTO TipoAnuncio(idTipoAnuncio, data, campanha) VALUES (2, '04/06/2016', 1);
-INSERT INTO TipoAnuncio(idTipoAnuncio, data, campanha) VALUES (3, '02/01/2018', 2);
+INSERT INTO TipoAnuncio(idTipoAnuncio, data, campanha) VALUES (1, '2016-06-02', 1);
+INSERT INTO TipoAnuncio(idTipoAnuncio, data, campanha) VALUES (2, '2016-04-02', 1);
+INSERT INTO TipoAnuncio(idTipoAnuncio, data, campanha) VALUES (3, '2018-01-02', 2);
 
 --AnuncioTemplate
 INSERT INTO AnuncioTemplate(idAnuncioTemplate, click, tipoAnuncio) VALUES(1, 0, 1);

@@ -38,7 +38,7 @@ CREATE TABLE ContaPremium(
 
 CREATE TABLE ContaFree(
   idUser NUMBER REFERENCES User(idUser),
-  mesGratisUsado INT NOT NULL --bool
+  mesGratisUsado INT DEFAULT 0 CONSTRAINT isBool CHECK(mesGratisUsado=0 OR mesGratisUsado=1)--bool
 );
 
 CREATE TABLE Anunciante(
@@ -66,12 +66,12 @@ CREATE TABLE TipoAnuncio(
 
 CREATE TABLE Interesse(
   idInteresse INTEGER PRIMARY KEY AUTOINCREMENT,
-  nivelInteresse INT NOT NULL
+  nivelInteresse INT NOT NULL CONSTRAINT isPercentage CHECK(nivelInteresse >=0 AND nivelInteresse <=100)
 );
 
 CREATE TABLE AnuncioTemplate(
   idAnuncioTemplate INTEGER PRIMARY KEY AUTOINCREMENT,
-  click INT NOT NULL, --bool
+  click INT NOT NULL CONSTRAINT isBool CHECK(click=0 OR click=1), --bool
   tipoAnuncio NUMBER REFERENCES TipoAnuncio(idTipoAnuncio)
 );
 

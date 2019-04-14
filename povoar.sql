@@ -17,9 +17,9 @@ INSERT INTO ContaPremium(idUser, dataPagamentoInicio, dataPagamentoProximo, sald
 INSERT INTO ContaPremium(idUser, dataPagamentoInicio, dataPagamentoProximo, saldo) VALUES (2, "2017-02-01", "2018-10-06", -10); -- Theresa May
 
 --ContaFree
-INSERT INTO ContaFree(idUser, mesGratisUsado) VALUES (1, 0); -- Bernie Sanders
-INSERT INTO ContaFree(idUser, mesGratisUsado) VALUES (3, 1); -- Hillary Clinton
-INSERT INTO ContaFree(idUser, mesGratisUsado) VALUES (5, 0); -- Kim Jong-un
+INSERT INTO ContaFree(idUser) VALUES (1); -- Bernie Sanders
+INSERT INTO ContaFree(idUser) VALUES (3); -- Hillary Clinton
+INSERT INTO ContaFree(idUser) VALUES (5); -- Kim Jong-un
 
 --Interesse
 insert into Interesse values (0, 0);

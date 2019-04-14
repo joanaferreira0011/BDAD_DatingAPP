@@ -32,7 +32,7 @@ CREATE TABLE User(
 CREATE TABLE ContaPremium(
   idUser NUMBER REFERENCES User(idUser),
   dataPagamentoInicio TEXT NOT NULL,
-  dataPagamentoFim TEXT NOT NULL,
+  dataPagamentoProximo TEXT NOT NULL,
   saldo REAL NOT NULL
 );
 

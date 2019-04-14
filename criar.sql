@@ -1,11 +1,11 @@
 --Clean tables
 DROP TABLE IF EXISTS AnuncioTemplate;
-DROP TABLE IF EXISTS Interesse;
 DROP TABLE IF EXISTS TipoAnuncio;
 DROP TABLE IF EXISTS Campanha;
 DROP TABLE IF EXISTS Anunciante;
-DROP TABLE IF EXISTS Mensagem;
+DROP TABLE IF EXISTS Interesse;
 DROP TABLE IF EXISTS Denuncia;
+DROP TABLE IF EXISTS Mensagem;
 DROP TABLE IF EXISTS Encontro;
 DROP TABLE IF EXISTS Local;
 DROP TABLE IF EXISTS Match;
@@ -19,7 +19,7 @@ DROP TABLE IF EXISTS User;
 
 CREATE TABLE User(
   idUser INTEGER PRIMARY KEY AUTOINCREMENT,
-  userName NVARCHAR(50) NOT NULL,
+  userName NVARCHAR(50) NOT NULL UNIQUE ,
   primeiroNome NVARCHAR(50) NOT NULL,
   ultimoNome NVARCHAR(50) NOT NULL,
   genero NVARCHAR(50) NOT NULL,
@@ -60,7 +60,7 @@ CREATE TABLE Campanha(
 CREATE TABLE TipoAnuncio(
   idTipoAnuncio INTEGER PRIMARY KEY AUTOINCREMENT,
   data TEXT NOT NULL,
-  idAnuncioTemplate NUMBER REFERENCES AnuncioTemplate(idAnuncioTemplate)
+  campanha NUMBER REFERENCES Campanha(idCampanha)
 );
 
 CREATE TABLE Interesse(
@@ -71,7 +71,7 @@ CREATE TABLE Interesse(
 CREATE TABLE AnuncioTemplate(
   idAnuncioTemplate INTEGER PRIMARY KEY AUTOINCREMENT,
   click INT NOT NULL, --bool
-  idTipoAnuncio NUMBER REFERENCES TipoAnuncio(idTipoAnuncio)
+  tipoAnuncio NUMBER REFERENCES TipoAnuncio(idTipoAnuncio)
 );
 
 

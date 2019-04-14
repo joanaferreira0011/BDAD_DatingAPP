@@ -1,6 +1,5 @@
 PRAGMA	foreign_keys	=	ON;
 
-
 --Users
 INSERT INTO User(idUser, userName, primeiroNome, ultimoNome, genero, password, email, dataNascimento, interesses) VALUES (0, "wonka", "Willy", "Wonka", "Man", "chocolate", "willy@chocolatefactory.com", "01/01/1960","Chocolate and small people");
 INSERT INTO User(idUser, userName, primeiroNome, ultimoNome, genero, password, email, dataNascimento, interesses) VALUES (1, "sanders", "Bernie", "Sanders", "Man", "feelthebern", "bernie@bernie2020.com", "08/09/1941","Socialism and not the top 1%");
@@ -30,11 +29,22 @@ insert into Interesse values (2,2);
 --Anunciante
 INSERT INTO Anunciante(idAnunciante, nome, saldo) VALUES (1, "McDonalds", -230000);
 INSERT INTO Anunciante(idAnunciante, nome, saldo) VALUES (2, "Toyota", 0);
-
+INSERT INTO Anunciante(idAnunciante, nome, saldo) VALUES (3, "Tencent", -10000);
 
 --Campanha
 INSERT INTO Campanha(idCampanha, conteudo, dataInicio, dataFim, idAnunciante, custo) VALUES (1, "I'm lovin it", "02/05/2015", "01/08/2025", 1, 1000000);--McDonalds
 INSERT INTO Campanha(idCampanha, conteudo, dataInicio, dataFim, idAnunciante, custo) VALUES (2, "New McBifana", "01/01/2018", "01/08/2018", 1, 75000);--McDonalds
+
+
+--TipoAnuncio
+INSERT INTO TipoAnuncio(idTipoAnuncio, data, campanha) VALUES (1, '02/06/2016', 1);
+INSERT INTO TipoAnuncio(idTipoAnuncio, data, campanha) VALUES (2, '04/06/2016', 1);
+INSERT INTO TipoAnuncio(idTipoAnuncio, data, campanha) VALUES (3, '02/01/2018', 2);
+
+--AnuncioTemplate
+INSERT INTO AnuncioTemplate(idAnuncioTemplate, click, tipoAnuncio) VALUES(1, 0, 1);
+INSERT INTO AnuncioTemplate(idAnuncioTemplate, click, tipoAnuncio) VALUES(2, 0, 3);
+INSERT INTO AnuncioTemplate(idAnuncioTemplate, click, tipoAnuncio) VALUES(3, 0, 2);
 
 
 --Like
@@ -69,6 +79,8 @@ INSERT INTO Mensagem(idMensagem, match, remetente, conteudo, data) VALUES (2, 1,
 INSERT INTO Mensagem(idMensagem, match, remetente, conteudo, data) VALUES (3, 1, 2, 'Come to Washington.', '07/03/2018');
 INSERT INTO Mensagem(idMensagem, match, remetente, conteudo, data) VALUES (4, 1, 5, 'Aint got a plane. Lets meet in the middle', '07/03/2018');
 INSERT INTO Mensagem(idMensagem, match, remetente, conteudo, data) VALUES (5, 1, 2, 'Vietnam it is.', '07/03/2018');
+INSERT INTO Mensagem(idMensagem, match, remetente, conteudo, data) VALUES (6, 2, 5, 'Xi, you there? I just mathed with Trump, need advice.', '06/03/2018'); -- Kim to Xi
+INSERT INTO Mensagem(idMensagem, match, remetente, conteudo, data) VALUES (7, 2, 8, 'Sure, come meet me', '07/03/2018'); -- Xi to Kim
 
 --Denuncia
 INSERT INTO Denuncia(idDenuncia, mensagem, descricao, data) VALUES (1, 4, 'I though this app selected by money', '07/03/2018');

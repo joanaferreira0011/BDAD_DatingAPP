@@ -1,4 +1,7 @@
 --Clean tables
+DROP TABLE IF EXISTS AnuncioTemplate;
+DROP TABLE IF EXISTS Interesse;
+DROP TABLE IF EXISTS TipoAnuncio;
 DROP TABLE IF EXISTS Campanha;
 DROP TABLE IF EXISTS Anunciante;
 DROP TABLE IF EXISTS Mensagem;
@@ -53,6 +56,25 @@ CREATE TABLE Campanha(
   idAnunciante NUMBER REFERENCES Anunciante(idAnunciante),
   custo REAL NOT NULL
 );
+
+CREATE TABLE TipoAnuncio(
+  idTipoAnuncio INTEGER PRIMARY KEY AUTOINCREMENT,
+  tipo TEXT NOT NULL,
+  data TEXT NOT NULL,
+  idAnuncioTemplate NUMBER REFERENCES AnuncioTemplate(idAnuncioTemplate)
+);
+
+CREATE TABLE Interesse(
+  idInteresse INTEGER PRIMARY KEY AUTOINCREMENT,
+  nivelInteresse INT NOT NULL
+);
+
+CREATE TABLE AnuncioTemplate(
+  idAnuncioTemplate INTEGER PRIMARY KEY AUTOINCREMENT,
+  click INT NOT NULL, --bool
+  idTipoAnuncio NUMBER REFERENCES TipoAnuncio(idTipoAnuncio)
+);
+
 
 CREATE TABLE Like(
   idLike INTEGER PRIMARY KEY AUTOINCREMENT,

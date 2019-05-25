@@ -2,4 +2,5 @@
 .headers on
 .nullvalue NULL
 
-SELECT * FROM (SELECT count(*) as places FROM Local GROUP BY pais)  WHERE max(places);
+-- DONE and Works
+SELECT local FROM Encontro GROUP BY "local" ORDER BY count(*) DESC limit 1;

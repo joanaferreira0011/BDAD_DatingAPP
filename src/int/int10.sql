@@ -2,5 +2,17 @@
 .headers on
 .nullvalue NULL
 
--- NOT DONED
-select idMatch, user1, user2, User.dataNascimento from match natural join like natural join User where (like.user1 = User.idUser) and (like.idLike = match.like1 or like.idLike = match.like2) group by dataNascimento, idMatch;
+DROP VIEW IF EXISTS matches;
+
+CREATE VIEW matches
+as
+select idMatch, first.userName as name1, second.userName as name2 , first.dataNascimento as data1, second.dataNascimento as data2
+from Match, Like, User first, User second
+where Match.like1=Like.idLike and
+      (Like.user1= first.idUser and Like.user2= second.idUser)
+      group by match.idMatch;
+
+select idMatch,name1, name2, max(abs(strftime('%Y',data1)- strftime('%Y',data2))) as MAX
+from matches;
+
+DROP VIEW IF EXISTS matches;

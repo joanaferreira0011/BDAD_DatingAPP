@@ -12,15 +12,15 @@ INSERT INTO Hobby(idHobby, carros, tecnologia, comida) VALUES (7, 0,1,1);
 INSERT INTO Hobby(idHobby, carros, tecnologia, comida) VALUES (8, 0,1,0);
 
 --Users
-INSERT INTO User(idUser, userName, primeiroNome, ultimoNome, genero, password, email, dataNascimento, descricao, idHobby) VALUES (0, "wonka", "Willy", "Wonka", "Man", "chocolate", "willy@chocolatefactory.com", "01/01/1960","Chocolate and small people",0);
-INSERT INTO User(idUser, userName, primeiroNome, ultimoNome, genero, password, email, dataNascimento, descricao, idHobby) VALUES (1, "sanders", "Bernie", "Sanders", "Man", "feelthebern", "bernie@bernie2020.com", "08/09/1941","Socialism and not the top 1%",1);
-INSERT INTO User(idUser, userName, primeiroNome, ultimoNome, genero, password, email, dataNascimento, descricao, idHobby) VALUES (2, "trump", "Donald", "Trump", "Man", "wall", "trump@trump.com", "14/06/1946","Making America Great Again is what I do",2);
-INSERT INTO User(idUser, userName, primeiroNome, ultimoNome, genero, password, email, dataNascimento, descricao, idHobby) VALUES (3, "clinton", "Hillary", "Clinton", "Woman", "damnRussia", "hillary@hillary2016.com", "26/10/1947","Still fighting",3);
-INSERT INTO User(idUser, userName, primeiroNome, ultimoNome, genero, password, email, dataNascimento, descricao, idHobby) VALUES (4, "may", "Theresa", "May", "Woman", "damnBrexit", "theresamay@europeanunion.com", "01/10/1956","I love the UK and the EU",4);
-INSERT INTO User(idUser, userName, primeiroNome, ultimoNome, genero, password, email, dataNascimento, descricao, idHobby) VALUES (5, "kim", "Jong-un", "Kim", "Man", "nucs", "kimjongun@northkorea.com", "08/01/1983","My Nation and Winnie the Poo",5);
-INSERT INTO User(idUser, userName, primeiroNome, ultimoNome, genero, password, email, dataNascimento, descricao, idHobby) VALUES (6, "merkel", "Angela", "Merkel", "Woman", "eu", "angelamerkel@europeanunion.com", "17/07/1954","Rules",6);
-INSERT INTO User(idUser, userName, primeiroNome, ultimoNome, genero, password, email, dataNascimento, descricao, idHobby) VALUES (7, "putin", "Vladimir", "Putin", "Man", "motherRussia", "vladimir@russia.com", "07/10/1952","Russia. Bathing.",7);
-INSERT INTO User(idUser, userName, primeiroNome, ultimoNome, genero, password, email, dataNascimento, descricao, idHobby) VALUES (8, "jinping", "Xi", "Jinping", "Man", "presidentForever", "xijinping@china.com", "15/06/1953","Communism",8);
+INSERT INTO User(idUser, userName, primeiroNome, ultimoNome, genero, password, email, dataNascimento, descricao, idHobby) VALUES (0, "wonka", "Willy", "Wonka", "Man", "chocolate", "willy@chocolatefactory.com", "1960-01-01","Chocolate and small people",0);
+INSERT INTO User(idUser, userName, primeiroNome, ultimoNome, genero, password, email, dataNascimento, descricao, idHobby) VALUES (1, "sanders", "Bernie", "Sanders", "Man", "feelthebern", "bernie@bernie2020.com", "1941-09-08","Socialism and not the top 1%",1);
+INSERT INTO User(idUser, userName, primeiroNome, ultimoNome, genero, password, email, dataNascimento, descricao, idHobby) VALUES (2, "trump", "Donald", "Trump", "Man", "wall", "trump@trump.com", '1946-06-14',"Making America Great Again is what I do",2);
+INSERT INTO User(idUser, userName, primeiroNome, ultimoNome, genero, password, email, dataNascimento, descricao, idHobby) VALUES (3, "clinton", "Hillary", "Clinton", "Woman", "damnRussia", "hillary@hillary2016.com", "1947-10-26","Still fighting",3);
+INSERT INTO User(idUser, userName, primeiroNome, ultimoNome, genero, password, email, dataNascimento, descricao, idHobby) VALUES (4, "may", "Theresa", "May", "Woman", "damnBrexit", "theresamay@europeanunion.com", "1956-10-01","I love the UK and the EU",4);
+INSERT INTO User(idUser, userName, primeiroNome, ultimoNome, genero, password, email, dataNascimento, descricao, idHobby) VALUES (5, "kim", "Jong-un", "Kim", "Man", "nucs", "kimjongun@northkorea.com", '1983-08-01',"My Nation and Winnie the Poo",5);
+INSERT INTO User(idUser, userName, primeiroNome, ultimoNome, genero, password, email, dataNascimento, descricao, idHobby) VALUES (6, "merkel", "Angela", "Merkel", "Woman", "eu", "angelamerkel@europeanunion.com", "1954-07-17","Rules",6);
+INSERT INTO User(idUser, userName, primeiroNome, ultimoNome, genero, password, email, dataNascimento, descricao, idHobby) VALUES (7, "putin", "Vladimir", "Putin", "Man", "motherRussia", "vladimir@russia.com", "1952-07-10","Russia. Bathing.",7);
+INSERT INTO User(idUser, userName, primeiroNome, ultimoNome, genero, password, email, dataNascimento, descricao, idHobby) VALUES (8, "jinping", "Xi", "Jinping", "Man", "presidentForever", "xijinping@china.com", "1953-06-15","Communism",8);
 
 
 --ContaPremium

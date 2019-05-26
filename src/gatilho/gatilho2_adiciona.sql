@@ -2,10 +2,10 @@
 
 Create Trigger T2 
 After Update Of click On AnuncioTemplate 
-For Each Row When New.click = true
+For Each Row When New.click = 1
 Begin
     Update Interesse
-    Set nivelInteresse = (count(*) FROM Interesse Where click  = true) / count(*) FROM Interesse
+    Set nivelInteresse = (count(*) from Interesse where click  = 1)/ (count(*) from Interesse)
     Where AnuncioTemplate.tipoAnuncio = TipoAnuncio.idTipoAnuncio
     And TipoAnuncio.interesse = Interesse.idInteresse;
 End;

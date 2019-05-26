@@ -13,7 +13,7 @@ DROP TABLE IF EXISTS Like;
 DROP TABLE IF EXISTS ContaFree;
 DROP TABLE IF EXISTS ContaPremium;
 DROP TABLE IF EXISTS User;
-
+DROP TABLE IF EXISTS Hobby;
 
 --Create tables
 
@@ -26,7 +26,15 @@ CREATE TABLE User(
   password NVARCHAR(50) NOT NULL,
   email NVARCHAR(50) NOT NULL,
   dataNascimento TEXT NOT NULL,
-  interesses TEXT
+  descricao TEXT NOT NULL,
+  idHobby NUMBER REFERENCES Hobby(idHobby)
+);
+
+CREATE TABLE Hobby(
+  idHobby INTEGER PRIMARY KEY AUTOINCREMENT,
+  carros INT DEFAULT 0 CONSTRAINT isBool CHECK(carros=0 OR carros=1),--bool
+  tecnologia INT DEFAULT 0 CONSTRAINT isBool CHECK(tecnologia=0 OR tecnologia=1),--bool
+  comida INT DEFAULT 0 CONSTRAINT isBool CHECK(comida=0 OR comida=1)--bool
 );
 
 CREATE TABLE ContaPremium(

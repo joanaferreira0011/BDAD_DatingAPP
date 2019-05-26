@@ -1,0 +1,1 @@
+--Trgger 3: Naõ servir o mesmo anuncio no mesmo dia, mais do q duas vezes   

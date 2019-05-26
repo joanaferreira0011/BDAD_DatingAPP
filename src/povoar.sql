@@ -44,8 +44,8 @@ INSERT INTO Anunciante(idAnunciante, nome, saldo) VALUES (2, "Toyota", 0);
 INSERT INTO Anunciante(idAnunciante, nome, saldo) VALUES (3, "Tencent", -10000);
 
 --Campanha
-INSERT INTO Campanha(idCampanha, conteudo, dataInicio, dataFim, idAnunciante, custo) VALUES (1, "I'm lovin it", "02/05/2015", "2025-08-01", 1, 1000000);--McDonalds
-INSERT INTO Campanha(idCampanha, conteudo, dataInicio, dataFim, idAnunciante, custo) VALUES (2, "New McBifana", "01/01/2018", "2018-08-01", 1, 75000);--McDonalds
+INSERT INTO Campanha(idCampanha, conteudo, dataInicio, dataFim, idAnunciante, custo) VALUES (1, "I'm lovin it", "2015-05-02", "2025-08-01", 1, 1000000);--McDonalds
+INSERT INTO Campanha(idCampanha, conteudo, dataInicio, dataFim, idAnunciante, custo) VALUES (2, "New McBifana", "2018-01-01", "2018-08-01", 1, 75000);--McDonalds
 
 
 --TipoAnuncio

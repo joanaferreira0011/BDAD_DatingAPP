@@ -1,1 +1,1 @@
-DROP TRIGGER N2;
+drop trigger T2;

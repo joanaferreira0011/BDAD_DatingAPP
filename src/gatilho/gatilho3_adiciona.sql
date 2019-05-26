@@ -1,9 +1,11 @@
---Trgger 3: Naõ servir o mesmo anuncio , mais do que uma vezes
+--Trigger 3: Não aceitar o mesmo like para um user vindo de outro user.
 
-Create Trigger T4
-Before Insert on AnuncioTemplate 
-For Each Row
-When exists (select* from ContaFree where idContaFree = Old.contaFree)
-Begin
-    Select raise(ignore);
-End;
+CREATE Trigger T3
+BEFORE INSERT ON "Like"
+BEGIN
+  SELECT
+  CASE
+  WHEN (SELECT COUNT(*) FROM "Like" WHERE user1=NEW.user1 AND user2=NEW.user2) > 0 THEN
+    RAISE(ABORT, 'This like already exists')
+ END;
+ END;

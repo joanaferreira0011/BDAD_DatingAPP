@@ -75,7 +75,7 @@ CREATE TABLE TipoAnuncio(
 
 CREATE TABLE Interesse(
   idInteresse INTEGER PRIMARY KEY AUTOINCREMENT,
-  nivelInteresse INT NOT NULL CONSTRAINT isPercentage CHECK(nivelInteresse >=0 AND nivelInteresse <=100)
+  nivelInteresse REAL NOT NULL CONSTRAINT isPercentage CHECK(nivelInteresse >=0 AND nivelInteresse <=100)
 );
 
 CREATE TABLE AnuncioTemplate(

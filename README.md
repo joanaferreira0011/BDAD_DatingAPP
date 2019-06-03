@@ -4,7 +4,7 @@
 A possible design of a database for a dating app. (in Portuguese)
 
 ### **Context** 
-'Databases' course of the Integrated Master in Informatics and Computing Engineering at the University of Porto.
+*Databases* course of the Integrated Master in Informatics and Computing Engineering at the University of Porto.
 
 ### **Team** 
 * [Francisco Miranda](https://github.com/alvarofranciscomiranda "alvarofranciscomiranda")
